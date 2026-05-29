@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>PassCerfa — App de démonstration</title>
     <meta name="description" content="Démarches administratives FR pré-remplies via FranceConnect+. Mode démo accessible sans compte." />
-    <script type="module" crossorigin src="./assets/index-CX3ozNYB.js"></script>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="theme-color" content="#000091" />
+    <script type="module" crossorigin src="./assets/index-C2Z86Gk-.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-QfX5f6Fa.css">
   </head>
   <body>
@@ -17,5 +19,12 @@
     <footer>
       <p>🔒 Aucune donnée stockée · Conforme RGPD · <a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a></p>
     </footer>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(() => { /* silent */ });
+        });
+      }
+    </script>
   </body>
 </html>
