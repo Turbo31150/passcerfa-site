@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Politique de confidentialité — PassCerfa</title>
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a href="#contenu-principal" class="skip-link">Aller au contenu</a>
+<header role="banner"><nav aria-label="Navigation principale">
+  <a href="/" class="logo">🤝 PassCerfa</a>
+  <ul><li><a href="tarifs.html">Tarifs</a></li><li><a href="mentions-legales.html">Mentions légales</a></li></ul>
+</nav></header>
+<main id="contenu-principal" style="max-width:800px;margin:2rem auto;padding:0 1rem">
+<h1>Politique de confidentialité</h1>
+<p>PassCerfa est conçu selon le principe <strong>Privacy by Design</strong> et <strong>Data Minimization</strong> (RGPD, art. 5). Cette page explique précisément quelles données transitent, où, et comment elles sont protégées.</p>
+
+<h2>Responsable de traitement</h2>
+<p>Franck Delmas — <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a> — Conformément à l'art. 13 RGPD.</p>
+
+<h2>Données collectées</h2>
+<h3>Ce que nous ne collectons PAS</h3>
+<ul>
+  <li>Aucun compte utilisateur, aucun profil stocké côté serveur</li>
+  <li>Aucun log applicatif contenant des données personnelles</li>
+  <li>Aucun cookie de tracking, de publicité, ou de mesure d'audience</li>
+</ul>
+
+<h3>Ce qui transite côté client (dans votre navigateur uniquement)</h3>
+<ul>
+  <li><strong>Token FranceConnect+</strong> : stocké en <code>sessionStorage</code> chiffré (AES-256-GCM, Web Crypto API), purgé à la fermeture de l'onglet via <code>beforeunload</code> et <code>visibilitychange</code>. Durée de vie maximale : 1 heure.</li>
+  <li><strong>Préférences accessibilité</strong> : stockées en <code>localStorage</code> (mode dyslexie, contraste, taille police). Ne contiennent aucune donnée personnelle.</li>
+  <li><strong>Données de formulaires</strong> : traitées uniquement en mémoire vive du navigateur. Non transmises à nos serveurs.</li>
+</ul>
+
+<h2>Flux de données</h2>
+<table style="width:100%;border-collapse:collapse;font-size:.9rem">
+  <caption>Flux de données PassCerfa</caption>
+  <thead><tr style="background:var(--primary);color:#fff"><th scope="col" style="padding:.5rem;text-align:left">Flux</th><th scope="col" style="padding:.5rem">Destinataire</th><th scope="col" style="padding:.5rem">Base légale</th><th scope="col" style="padding:.5rem">Localisation</th></tr></thead>
+  <tbody>
+    <tr><td style="padding:.5rem">Authentification FC+</td><td style="padding:.5rem;text-align:center">FranceConnect+ (DINUM)</td><td style="padding:.5rem;text-align:center">Consentement (art. 6.1.a)</td><td style="padding:.5rem;text-align:center">France (UE)</td></tr>
+    <tr><td style="padding:.5rem">Données personnelles pré-remplissage</td><td style="padding:.5rem;text-align:center">APIs gouv.fr (DGFiP, CAF, CARSAT…)</td><td style="padding:.5rem;text-align:center">Exécution contrat (art. 6.1.b)</td><td style="padding:.5rem;text-align:center">France (UE)</td></tr>
+    <tr><td style="padding:.5rem">Reformulation FALC/courriers (opt-in)</td><td style="padding:.5rem;text-align:center">Mistral AI (Paris) ou modèle local</td><td style="padding:.5rem;text-align:center">Consentement (art. 6.1.a)</td><td style="padding:.5rem;text-align:center">France (UE) ou local</td></tr>
+    <tr><td style="padding:.5rem">Soumission formulaire final</td><td style="padding:.5rem;text-align:center">Site officiel concerné (impots.gouv.fr, caf.fr…)</td><td style="padding:.5rem;text-align:center">Exécution contrat</td><td style="padding:.5rem;text-align:center">France (UE)</td></tr>
+  </tbody>
+</table>
+
+<h2>Droits des personnes</h2>
+<p>Conformément aux articles 15 à 22 du RGPD, vous disposez des droits suivants :</p>
+<ul>
+  <li>Droit d'accès, rectification, suppression — <em>sans objet : aucune donnée n'est stockée</em></li>
+  <li>Droit à la portabilité — fonctionnalité "exporter mon dossier" disponible dans l'interface</li>
+  <li>Droit de retrait du consentement — cliquez sur "Déconnexion" ou fermez l'onglet</li>
+</ul>
+<p>Pour exercer vos droits : <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+<p>Vous pouvez également saisir la CNIL : <a href="https://www.cnil.fr/fr/plaintes" rel="noopener">cnil.fr/fr/plaintes</a></p>
+
+<h2>Sécurité technique</h2>
+<ul>
+  <li>HTTPS (TLS 1.3) — certificat GitHub Pages</li>
+  <li>CSP stricte — aucun script tiers autorisé</li>
+  <li>Token FC+ chiffré AES-256-GCM en mémoire client</li>
+  <li>OCR local Tesseract.js WASM — aucun document envoyé à un serveur</li>
+  <li>Anonymisation NER locale avant tout appel LLM cloud (NIR, RIB, adresses masqués)</li>
+</ul>
+
+<p style="opacity:.7;font-size:.85rem">Dernière mise à jour : 29 mai 2026</p>
+</main>
+<footer><p><a href="/">Accueil</a> · <a href="mentions-legales.html">Mentions légales</a> · <a href="accessibilite.html">Accessibilité</a> · <a href="tarifs.html">Tarifs</a></p></footer>
+</body>
+</html>

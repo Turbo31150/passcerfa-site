@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tarifs & Forfaits — PassCerfa</title>
+<meta name="description" content="Forfaits PassCerfa : de gratuit à 49 €/mois pour les structures. Assistance démarches administratives assistée IA, 30 CERFA pré-remplis, accessibilité incluse.">
+<meta name="keywords" content="tarifs, forfait, abonnement, aide démarches administratives, PassCerfa, accessibilité, MDPH, CAF">
+<link rel="canonical" href="https://turbo31150.github.io/passcerfa-site/tarifs.html">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>
+.pricing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin:2rem auto;max-width:1100px;padding:0 1rem}
+.plan{background:var(--card);border:2px solid var(--border);border-radius:var(--radius);padding:2rem;position:relative;box-shadow:var(--shadow)}
+.plan.popular{border-color:var(--primary);box-shadow:0 4px 20px rgba(0,102,204,.18)}
+.plan.popular::before{content:"⭐ Le plus populaire";position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--primary);color:#fff;font-size:.78rem;font-weight:700;padding:.2rem .9rem;border-radius:20px;white-space:nowrap}
+.plan-name{font-size:1.2rem;font-weight:700;margin:0 0 .5rem}
+.plan-price{font-size:2.4rem;font-weight:800;color:var(--primary);line-height:1}
+.plan-price span{font-size:1rem;font-weight:400;color:var(--fg);opacity:.7}
+.plan-desc{font-size:.95rem;opacity:.8;margin:.8rem 0 1.2rem}
+.plan-features{list-style:none;padding:0;margin:0 0 1.5rem;font-size:.92rem}
+.plan-features li{padding:.35rem 0;border-bottom:1px solid var(--border)}
+.plan-features li::before{content:"✅ ";font-size:.85rem}
+.plan-features li.no::before{content:"— "}
+.plan-features li.no{opacity:.5}
+.plan-cta{display:block;text-align:center;padding:.85rem 1rem;border-radius:var(--radius);font-weight:700;text-decoration:none;background:var(--primary);color:#fff}
+.plan-cta:hover{background:#0052a3}
+.plan.popular .plan-cta{background:#00875a}
+.plan.popular .plan-cta:hover{background:#006644}
+.faq{max-width:800px;margin:3rem auto;padding:0 1rem}
+.faq details{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);margin:.8rem 0;padding:1rem 1.2rem}
+.faq summary{font-weight:600;cursor:pointer;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"▸ ";color:var(--primary)}
+details[open] summary::before{content:"▾ "}
+.compare-table{width:100%;border-collapse:collapse;margin:2rem auto;max-width:900px;font-size:.9rem}
+.compare-table th,.compare-table td{padding:.7rem 1rem;border:1px solid var(--border);text-align:center}
+.compare-table th{background:var(--primary);color:#fff}
+.compare-table tr:nth-child(even){background:var(--priority)}
+.compare-table td:first-child{text-align:left;font-weight:500}
+.hero-tarifs{text-align:center;padding:3rem 1rem 1.5rem;max-width:700px;margin:0 auto}
+.savings{background:#e7f5e7;border:2px solid var(--secondary);border-radius:var(--radius);padding:1.2rem;text-align:center;max-width:700px;margin:1.5rem auto}
+</style>
+</head>
+<body>
+<a href="#contenu-principal" class="skip-link">Aller au contenu</a>
+<header role="banner">
+  <nav aria-label="Navigation principale">
+    <a href="/" class="logo" aria-label="Accueil PassCerfa">🤝 PassCerfa</a>
+    <ul>
+      <li><a href="/#comment-ca-marche">Comment ça marche</a></li>
+      <li><a href="/#demarches">Démarches</a></li>
+      <li><a href="tarifs.html" aria-current="page" class="nav-tarifs">Tarifs</a></li>
+      <li><a href="/#accessibilite">Accessibilité</a></li>
+    </ul>
+    <button id="dyslexie-toggle" aria-pressed="false" aria-label="Activer la police dyslexique">🅰️ Dys</button>
+    <button id="contrast-toggle" aria-pressed="false" aria-label="Activer le contraste élevé">🌓 Contraste</button>
+    <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+  </nav>
+</header>
+
+<main id="contenu-principal">
+<div class="hero-tarifs">
+  <h1>Forfaits PassCerfa</h1>
+  <p class="lead">Une tarification claire, sans surprise. Pas de facturation à la requête — vous payez un forfait fixe, l'IA fait le reste.</p>
+</div>
+
+<div class="savings" role="note">
+  💡 <strong>Pas de LLM à payer séparément.</strong> Tous les modèles d'IA sont inclus dans votre forfait — hébergés sur nos serveurs en France, RGPD natif.
+</div>
+
+<section aria-label="Grille des offres">
+  <div class="pricing-grid">
+
+    <!-- Découverte -->
+    <div class="plan">
+      <p class="plan-name">Découverte</p>
+      <p class="plan-price">0 €<span>/mois</span></p>
+      <p class="plan-desc">Pour essayer, sans engagement ni CB.</p>
+      <ul class="plan-features" aria-label="Fonctionnalités incluses">
+        <li>5 démarches prioritaires (impôts, CAF, Ameli, France Travail, MDPH)</li>
+        <li>Pré-remplissage CERFA via FranceConnect+</li>
+        <li>Modes accessibilité (Dys, Contraste, A+)</li>
+        <li>Zéro stockage de vos données</li>
+        <li class="no">LLM cloud (reformulation, courriers)</li>
+        <li class="no">Rappels d'échéance</li>
+        <li class="no">Support humain</li>
+      </ul>
+      <a href="mailto:miningexpert31@gmail.com?subject=Forfait Découverte PassCerfa" class="plan-cta">Commencer gratuitement</a>
+    </div>
+
+    <!-- Autonomie -->
+    <div class="plan popular">
+      <p class="plan-name">Autonomie</p>
+      <p class="plan-price">8,90 €<span>/mois</span></p>
+      <p class="plan-desc">Particuliers, aidants familiaux, personnes en situation de handicap.</p>
+      <ul class="plan-features" aria-label="Fonctionnalités incluses">
+        <li>30 démarches complètes</li>
+        <li>LLM IA souverain inclus (Mistral FR + local)</li>
+        <li>Reformulation FALC automatique</li>
+        <li>Génération de courriers administratifs</li>
+        <li>Rappels automatiques d'échéance</li>
+        <li>Sauvegarde locale chiffrée (opt-in)</li>
+        <li>Support email sous 48h</li>
+        <li>Justificatif pour financement MDPH/CAF</li>
+      </ul>
+      <a href="mailto:miningexpert31@gmail.com?subject=Forfait Autonomie PassCerfa - Demande" class="plan-cta">Démarrer pour 8,90 €/mois</a>
+    </div>
+
+    <!-- Autonomie+ -->
+    <div class="plan">
+      <p class="plan-name">Autonomie+</p>
+      <p class="plan-price">24,90 €<span>/mois</span></p>
+      <p class="plan-desc">Accompagnement avancé, situations complexes, aidants professionnels.</p>
+      <ul class="plan-features" aria-label="Fonctionnalités incluses">
+        <li>Tout Autonomie inclus</li>
+        <li>Interface FALC complète (langage simplifié sur toutes les pages)</li>
+        <li>Recours administratifs assistés (CDAPH, préfecture…)</li>
+        <li>Alerte anti-délai (5 jours avant date limite)</li>
+        <li>Accompagnement par chat sous 4h (jours ouvrés)</li>
+        <li>Compte aidant (suivi de 3 bénéficiaires)</li>
+        <li>Rapport mensuel des démarches complétées</li>
+      </ul>
+      <a href="mailto:miningexpert31@gmail.com?subject=Forfait Autonomie+ PassCerfa" class="plan-cta">Demander un accès</a>
+    </div>
+
+    <!-- Structure -->
+    <div class="plan">
+      <p class="plan-name">Structure</p>
+      <p class="plan-price">49 €<span>/mois</span></p>
+      <p class="plan-desc">CCAS, EHPAD, associations, maisons France Services, SAMU Social.</p>
+      <ul class="plan-features" aria-label="Fonctionnalités incluses">
+        <li>20 comptes médiateurs</li>
+        <li>Tableau de bord suivi des dossiers accompagnés</li>
+        <li>LLM cloud illimité (quota géré côté serveur)</li>
+        <li>Intégration WhatsApp/SMS bénéficiaires</li>
+        <li>Rapports d'activité anonymisés (économies estimées)</li>
+        <li>Formation équipe 1h visio incluse</li>
+        <li>Support prioritaire sous 4h</li>
+        <li>Facturation mensuelle ou annuelle (−15 %)</li>
+      </ul>
+      <a href="mailto:miningexpert31@gmail.com?subject=Forfait Structure PassCerfa - Devis" class="plan-cta">Demander un devis</a>
+    </div>
+
+  </div>
+</section>
+
+<section aria-label="Tableau comparatif" style="overflow-x:auto;padding:0 1rem">
+  <h2 style="text-align:center;margin-top:3rem">Comparatif détaillé</h2>
+  <table class="compare-table" role="table">
+    <caption class="sr-only">Comparaison des forfaits PassCerfa</caption>
+    <thead>
+      <tr>
+        <th scope="col">Fonctionnalité</th>
+        <th scope="col">Découverte</th>
+        <th scope="col">Autonomie</th>
+        <th scope="col">Autonomie+</th>
+        <th scope="col">Structure</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Démarches disponibles</td><td>5</td><td>30</td><td>30 + recours</td><td>30 + illimité</td></tr>
+      <tr><td>FranceConnect+ pré-remplissage</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+      <tr><td>LLM IA souverain</td><td>Local seulement</td><td>✅ 500/mois</td><td>✅ illimité</td><td>✅ illimité</td></tr>
+      <tr><td>Reformulation FALC</td><td>—</td><td>✅</td><td>✅ intégrale</td><td>✅</td></tr>
+      <tr><td>Génération courriers</td><td>—</td><td>✅</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Rappels d'échéance</td><td>—</td><td>✅</td><td>✅ + alertes</td><td>✅</td></tr>
+      <tr><td>Comptes médiateurs</td><td>1</td><td>1</td><td>3</td><td>20</td></tr>
+      <tr><td>Support</td><td>Docs</td><td>Email 48h</td><td>Chat 4h</td><td>Prioritaire 4h</td></tr>
+      <tr><td>Tableau de bord structure</td><td>—</td><td>—</td><td>—</td><td>✅</td></tr>
+      <tr><td>Zéro stockage données</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Prix</td><td><strong>0 €</strong></td><td><strong>8,90 €/mois</strong></td><td><strong>24,90 €/mois</strong></td><td><strong>49 €/mois</strong></td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section class="faq" aria-label="Questions fréquentes">
+  <h2>Questions fréquentes</h2>
+
+  <details>
+    <summary>Est-ce que mes données sont stockées ?</summary>
+    <p>Non. Aucune donnée personnelle n'est conservée côté serveur. Votre token FranceConnect+ est chiffré en mémoire locale (sessionStorage AES-256-GCM) et purgé automatiquement à la fermeture de l'onglet. L'OCR des documents se fait dans votre navigateur (Tesseract.js WASM).</p>
+  </details>
+
+  <details>
+    <summary>Comment est financé le forfait Découverte gratuit ?</summary>
+    <p>Le forfait gratuit est financé par les forfaits payants et les contrats Structure. Il reste limité à 5 démarches pour rester soutenable. Nous n'affichons aucune publicité et ne revendons aucune donnée.</p>
+  </details>
+
+  <details>
+    <summary>Puis-je obtenir un financement pour mon forfait ?</summary>
+    <p>Oui. Le forfait Autonomie (8,90 €/mois) peut faire l'objet d'une demande de financement auprès de la MDPH (prestation de compensation), de la CAF (aide numérique), ou dans le cadre du RSA. Nous fournissons un justificatif d'abonnement et une attestation d'accessibilité RGAA sur demande.</p>
+  </details>
+
+  <details>
+    <summary>Comment résilier ?</summary>
+    <p>Résiliation à tout moment par email à <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a>, sans préavis, sans frais. Vous pouvez continuer jusqu'à la fin de la période payée.</p>
+  </details>
+
+  <details>
+    <summary>Quels modes de paiement ?</summary>
+    <p>Carte bancaire (Stripe), virement SEPA (pour les structures), et PayPal. Les structures peuvent demander une facturation mensuelle ou annuelle (−15 %).</p>
+  </details>
+
+  <details>
+    <summary>Les collectivités peuvent-elles acheter sans processus de marché public ?</summary>
+    <p>Oui, en dessous de 40 000 € HT, les collectivités peuvent acheter en gré à gré sans marché formalisé (seuil 2024). Le forfait Structure à 49 €/mois représente 588 €/an — très en dessous de ce seuil. Nous émettons des bons de commande et des factures conformes à la réglementation.</p>
+  </details>
+</section>
+
+<section style="text-align:center;padding:3rem 1rem;max-width:600px;margin:0 auto">
+  <h2>Une question spécifique ?</h2>
+  <p>Nous répondons sous 24h. Pour les structures, un appel découverte de 30 minutes est offert.</p>
+  <a href="mailto:miningexpert31@gmail.com?subject=Question PassCerfa" class="btn btn-fc" style="display:inline-block;margin-top:1rem">Nous contacter</a>
+</section>
+</main>
+
+<footer>
+  <p>PassCerfa — assistance démarches admin FR — <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+  <p><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="accessibilite.html">Déclaration accessibilité</a></p>
+</footer>
+<script src="assets/a11y.js"></script>
+</body>
+</html>

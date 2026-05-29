@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://turbo31150.github.io/passcerfa-site/</loc><priority>1.0</priority></url>
-<url><loc>https://turbo31150.github.io/passcerfa-site/impots-2042/</loc><priority>0.9</priority></url>
-<url><loc>https://turbo31150.github.io/passcerfa-site/mdph-15692/</loc><priority>0.9</priority></url>
-<url><loc>https://turbo31150.github.io/passcerfa-site/aah-13750/</loc><priority>0.9</priority></url>
-<url><loc>https://turbo31150.github.io/passcerfa-site/apl-13754/</loc><priority>0.8</priority></url>
-<url><loc>https://turbo31150.github.io/passcerfa-site/carte-grise-14945/</loc><priority>0.8</priority></url>
-<url><loc>https://turbo31150.github.io/passcerfa-site/demarches/</loc><priority>0.7</priority></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/</loc><lastmod>2026-05-29</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/tarifs.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/mentions-legales.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/confidentialite.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/accessibilite.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/index.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/impots.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/caf.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/ameli.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/france-travail.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/mdph.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/carte-grise.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/facturation-electronique.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/logement-social.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/aah.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/demarches/retraite.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/impots-2042/index.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/mdph-15692/index.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/aah-13750/index.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/apl-13754/index.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
+  <url><loc>https://turbo31150.github.io/passcerfa-site/carte-grise-14945/index.html</loc><lastmod>2026-05-29</lastmod><changefreq>weekly</changefreq></url>
 </urlset>

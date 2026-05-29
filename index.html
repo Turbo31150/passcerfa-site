@@ -10,8 +10,12 @@
 <meta property="og:description" content="Automatiser ou assister vos démarches admin. Adapté à chaque difficulté.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:image" content="https://turbo31150.github.io/passcerfa-site/assets/og-card.png">
+<link rel="canonical" href="https://turbo31150.github.io/passcerfa-site/">
 </head>
 <body>
+<a href="#contenu-principal" class="skip-link">Aller au contenu</a>
 <header>
   <nav aria-label="Navigation principale">
     <a href="#" class="logo" aria-label="Accueil">🤝 Service Aide</a>
@@ -22,19 +26,20 @@
       <li><a href="#cerfa">CERFA</a></li>
       <li><a href="#securite">Sécurité</a></li>
       <li><a href="#accessibilite">Accessibilité</a></li>
+      <li><a href="tarifs.html" class="nav-tarifs">Tarifs</a></li>
     </ul>
     <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie">🅰️ Dys</button>
-    <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé">🌓 Contraste</button>
-    <button id="taille-plus" title="Agrandir le texte">A+</button>
+    <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
+    <button id="taille-plus" aria-label="Agrandir le texte" title="Agrandir le texte">A+</button>
   </nav>
 </header>
 
-<main>
+<main id="contenu-principal">
 <section class="hero">
   <h1>Vos démarches administratives, simplifiées par l'IA</h1>
   <p class="lead">Plateforme d'assistance qui s'adapte à <strong>votre</strong> difficulté : visuelle, motrice, cognitive, dys, illectronisme. APIs LLM gratuites. RGPD natif. 100% open-source.</p>
   <div class="cta">
-    <a href="/auth/franceconnect" class="btn btn-fc" id="fc-btn">
+    <a href="tarifs.html" class="btn btn-fc" id="fc-btn">
       <span class="fc-logo">FC+</span> S'identifier avec FranceConnect+
     </a>
     <a href="#demarches" class="btn btn-secondary">Voir les démarches</a>
@@ -54,6 +59,36 @@
   </ol>
 </section>
 
+
+<section id="tarifs-apercu" style="background:var(--priority);padding:2rem 1rem;margin:2rem 0">
+  <div style="max-width:900px;margin:0 auto;text-align:center">
+    <h2>Tarifs clairs, sans surprise</h2>
+    <p>De gratuit à 49 €/mois pour les structures. Aucune facturation à la requête — l'IA est incluse dans le forfait.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:1.5rem">
+      <div style="background:var(--card);border:2px solid var(--border);border-radius:var(--radius);padding:1.2rem 2rem;min-width:160px">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--primary)">0 €</div>
+        <div style="font-weight:600">Découverte</div>
+        <div style="font-size:.85rem;opacity:.7">5 démarches, gratuit</div>
+      </div>
+      <div style="background:var(--card);border:2px solid var(--primary);border-radius:var(--radius);padding:1.2rem 2rem;min-width:160px;position:relative">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--primary)">8,90 €</div>
+        <div style="font-weight:600">Autonomie</div>
+        <div style="font-size:.85rem;opacity:.7">30 démarches/mois</div>
+      </div>
+      <div style="background:var(--card);border:2px solid var(--border);border-radius:var(--radius);padding:1.2rem 2rem;min-width:160px">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--primary)">24,90 €</div>
+        <div style="font-weight:600">Autonomie+</div>
+        <div style="font-size:.85rem;opacity:.7">FALC, recours, alertes</div>
+      </div>
+      <div style="background:var(--card);border:2px solid var(--border);border-radius:var(--radius);padding:1.2rem 2rem;min-width:160px">
+        <div style="font-size:1.8rem;font-weight:800;color:var(--primary)">49 €</div>
+        <div style="font-weight:600">Structure</div>
+        <div style="font-size:.85rem;opacity:.7">20 médiateurs, SLA</div>
+      </div>
+    </div>
+    <a href="tarifs.html" class="btn btn-primary" style="display:inline-block;margin-top:1.5rem">Voir les forfaits détaillés →</a>
+  </div>
+</section>
 <section id="demarches">
   <h2>30 démarches couvertes</h2>
   <p>Triées par volume de recherche Google Trends FR (12 derniers mois).</p>
@@ -172,6 +207,12 @@
 <footer>
   <p>© 2026 Service Aide Automatisation · Open-source · RGPD natif · Hébergé sans cookies tiers</p>
   <p>Conforme RGAA 4.1 niveau AA · WCAG 2.2 niveau AA visé</p>
+  <p style="font-size:.85rem;margin-top:.5rem">
+    <a href="mentions-legales.html">Mentions légales</a> ·
+    <a href="confidentialite.html">Confidentialité</a> ·
+    <a href="accessibilite.html">Déclaration accessibilité</a> ·
+    <a href="tarifs.html">Tarifs</a>
+  </p>
 </footer>
 
 <script src="assets/a11y.js"></script>

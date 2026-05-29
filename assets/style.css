@@ -182,3 +182,12 @@ footer {
 
 a:focus, button:focus { outline: 3px solid var(--primary); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+
+/* Tarifs nav highlight */
+.nav-tarifs { background: var(--primary); color: #fff !important; padding: .3rem .8rem; border-radius: var(--radius); font-weight: 600; }
+.nav-tarifs:hover { background: #0052a3; }
+/* Skip link WCAG 2.4.1 */
+.skip-link { position: absolute; left: -9999px; top: 0; z-index: 9999; background: var(--primary); color: #fff; padding: .5rem 1rem; border-radius: 0 0 4px 0; font-weight: 700; }
+.skip-link:focus { left: 0; }
+/* Screen-reader only */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
