@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Aide Automatisation — Démarches administratives assistées IA</title>
+<meta name="description" content="Plateforme d'assistance aux démarches administratives françaises. Adapté aux handicaps (visuel, moteur, cognitif, dys, illectronisme). APIs LLM gratuites, agents IA locaux, RGPD natif.">
+<meta name="keywords" content="démarches administratives, aide handicap, automatisation IA, MDPH, CAF, impôts, France Travail, Ameli, accessibilité numérique, illectronisme, dys, RGPD">
+<meta property="og:title" content="Service Aide Automatisation — IA accessible">
+<meta property="og:description" content="Automatiser ou assister vos démarches admin. Adapté à chaque difficulté.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <nav aria-label="Navigation principale">
+    <a href="#" class="logo" aria-label="Accueil">🤝 Service Aide</a>
+    <ul>
+      <li><a href="#comment-ca-marche">Comment ça marche</a></li>
+      <li><a href="#demarches">Démarches</a></li>
+      <li><a href="#apis-etat">APIs gouv</a></li>
+      <li><a href="#cerfa">CERFA</a></li>
+      <li><a href="#securite">Sécurité</a></li>
+      <li><a href="#accessibilite">Accessibilité</a></li>
+    </ul>
+    <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie">🅰️ Dys</button>
+    <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé">🌓 Contraste</button>
+    <button id="taille-plus" title="Agrandir le texte">A+</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <h1>Vos démarches administratives, simplifiées par l'IA</h1>
+  <p class="lead">Plateforme d'assistance qui s'adapte à <strong>votre</strong> difficulté : visuelle, motrice, cognitive, dys, illectronisme. APIs LLM gratuites. RGPD natif. 100% open-source.</p>
+  <div class="cta">
+    <a href="/auth/franceconnect" class="btn btn-fc" id="fc-btn">
+      <span class="fc-logo">FC+</span> S'identifier avec FranceConnect+
+    </a>
+    <a href="#demarches" class="btn btn-secondary">Voir les démarches</a>
+  </div>
+  <p class="zero-storage">🔒 <strong>Login unique</strong> · une seule connexion à l'État, ensuite tout est automatique · <strong>aucune donnée client stockée sur nos serveurs</strong> · token éphémère purgé à la fermeture</p>
+  <p class="trust">📊 1.2M req/mois "impôts" · 410K "MDPH" · 290K "AAH" · Source Google Trends FR 2026</p>
+</section>
+
+<section id="comment-ca-marche">
+  <h2>Comment ça marche</h2>
+  <ol class="steps">
+    <li><strong>1 — Connexion unique</strong> : vous vous identifiez <strong>une fois</strong> sur le site officiel FranceConnect+ (impôts, Ameli, ou identité numérique La Poste).</li>
+    <li><strong>2 — Récupération auto</strong> : avec votre accord, l'app récupère vos justificatifs auprès des administrations (avis fiscal, quotient CAF, RIB, attestations) via les <a href="#apis-etat">14 APIs gouv</a> branchées.</li>
+    <li><strong>3 — Pré-remplissage CERFA</strong> : tous les formulaires CERFA (MDPH 15692, AAH 13750, 2042, etc.) sont remplis automatiquement. Vous validez champ par champ.</li>
+    <li><strong>4 — Soumission directe</strong> : envoi direct au site de l'État via API officielle. Vous recevez le reçu localement.</li>
+    <li><strong>5 — Purge</strong> : à la fermeture de l'onglet, le token et toutes les données disparaissent. <strong>Rien n'est conservé.</strong></li>
+  </ol>
+</section>
+
+<section id="demarches">
+  <h2>30 démarches couvertes</h2>
+  <p>Triées par volume de recherche Google Trends FR (12 derniers mois).</p>
+  <div class="grid-demarches">
+    <article class="demarche-card"><span class="rank">#1</span><h3>Impôts en ligne</h3><p>Déclaration revenus, paiement, modulation prélèvement à la source</p><p class="vol">1.2M/mois · dys/seniors</p><a href="demarches/impots.html">Détails →</a></article>
+    <article class="demarche-card"><span class="rank">#2</span><h3>CAF mon compte</h3><p>RSA, APL, prime activité, déclaration trimestrielle</p><p class="vol">980K/mois · illectronisme</p><a href="demarches/caf.html">Détails →</a></article>
+    <article class="demarche-card"><span class="rank">#3</span><h3>Ameli</h3><p>Carte vitale, remboursements, rendez-vous médicaux</p><p class="vol">720K/mois · seniors</p><a href="demarches/ameli.html">Détails →</a></article>
+    <article class="demarche-card"><span class="rank">#4</span><h3>France Travail</h3><p>Actualisation mensuelle, recherche emploi, formation</p><p class="vol">680K/mois · obligation</p><a href="demarches/france-travail.html">Détails →</a></article>
+    <article class="demarche-card priority"><span class="rank">#5</span><h3>MDPH</h3><p>Dossier handicap, renouvellement, recours</p><p class="vol">410K/mois · cognitif/visuel</p><a href="demarches/mdph.html">Détails →</a></article>
+    <article class="demarche-card"><span class="rank">#6</span><h3>Carte grise ANTS</h3><p>Changement adresse, cession véhicule, démarrage</p><p class="vol">380K/mois · moteur/dys</p><a href="demarches/carte-grise.html">Détails →</a></article>
+    <article class="demarche-card"><span class="rank">#7</span><h3>Facturation électronique 2026</h3><p>Factur-X, PDP, conformité TPE/PME</p><p class="vol">340K/mois · technique</p><a href="demarches/facturation-electronique.html">Détails →</a></article>
+    <article class="demarche-card"><span class="rank">#8</span><h3>Logement social</h3><p>Demande, renouvellement, simulateur</p><p class="vol">320K/mois · illectronisme</p><a href="demarches/logement-social.html">Détails →</a></article>
+    <article class="demarche-card priority"><span class="rank">#9</span><h3>AAH</h3><p>Allocation Adulte Handicapé · ouverture, renouvellement</p><p class="vol">290K/mois · cognitif</p><a href="demarches/aah.html">Détails →</a></article>
+    <article class="demarche-card"><span class="rank">#10</span><h3>Retraite CARSAT</h3><p>Réversion, demande, attestations</p><p class="vol">260K/mois · visuel/moteur</p><a href="demarches/retraite.html">Détails →</a></article>
+  </div>
+  <p class="more"><a href="demarches/index.html">+ 20 autres démarches →</a></p>
+</section>
+
+<section id="accessibilite">
+  <h2>S'adapte à votre difficulté</h2>
+  <div class="grid-accessibility">
+    <article class="acc-card"><span class="icon">👁️</span><h3>Visuel</h3><p>Lecture vocale, contraste élevé, taille texte ajustable, navigation clavier complète, compatible NVDA / VoiceOver / TalkBack.</p></article>
+    <article class="acc-card"><span class="icon">🦽</span><h3>Moteur</h3><p>Commandes vocales, navigation au clavier, zones de clic agrandies (44×44 px min), pas de "drag & drop" obligatoire.</p></article>
+    <article class="acc-card"><span class="icon">🧠</span><h3>Cognitif</h3><p>Langage clair (FALC), étapes numérotées, rappels automatiques, sauvegarde auto, validation par humain optionnelle.</p></article>
+    <article class="acc-card"><span class="icon">🅰️</span><h3>Dys</h3><p>Police OpenDyslexic, interlignage 1.5, contraste doux beige, surlignage syllabes, lecture audio synchronisée.</p></article>
+    <article class="acc-card"><span class="icon">📱</span><h3>Illectronisme</h3><p>Médiation par WhatsApp / téléphone / SMS, prise en charge complète par un médiateur Aidants Connect.</p></article>
+    <article class="acc-card"><span class="icon">🌍</span><h3>Langue</h3><p>Traduction simultanée 50+ langues (Whisper local), explication FALC, interprétariat humain pour démarches sensibles.</p></article>
+  </div>
+</section>
+
+<section id="apis-etat">
+  <h2>14 APIs gouv branchées (toutes gratuites)</h2>
+  <p>Une seule connexion FranceConnect+ → accès à <strong>tout l'écosystème data.gouv</strong>.</p>
+  <table class="apis-table">
+    <thead><tr><th>API</th><th>Usage</th><th>Auth</th></tr></thead>
+    <tbody>
+      <tr><td>FranceConnect+</td><td>Identité fédérée (eIDAS substantiel)</td><td>OIDC PKCE</td></tr>
+      <tr><td>API Particulier</td><td>Avis fiscal, quotient CAF, attestations Pôle Emploi</td><td>Datapass</td></tr>
+      <tr><td>API Entreprise</td><td>SIRET, KBis, attestations URSSAF/fiscales</td><td>Datapass</td></tr>
+      <tr><td>DGFiP impôts</td><td>Déclaration 2042 pré-remplie</td><td>FC+</td></tr>
+      <tr><td>ANTS</td><td>RDV passeport, carte grise, permis</td><td>OAuth ANTS</td></tr>
+      <tr><td>Démarches Simplifiées</td><td>1500+ procédures pré-remplies</td><td>Token DS</td></tr>
+      <tr><td>API Adresse BAN</td><td>Autocomplétion adresse officielle</td><td>Aucune</td></tr>
+      <tr><td>OpenFisca</td><td>Simulation droits (RSA, APL, AAH, PCH)</td><td>Aucune</td></tr>
+      <tr><td>CERFA Service-Public</td><td>Catalogue 1500+ formulaires</td><td>Aucune</td></tr>
+      <tr><td>Mes Aides</td><td>Vue consolidée droits sociaux</td><td>FC+</td></tr>
+      <tr><td>Mon Compte Pro</td><td>Identité agent administratif</td><td>OIDC</td></tr>
+      <tr><td>AnnuaireSP</td><td>Coordonnées service public local</td><td>Aucune</td></tr>
+      <tr><td>CSAPI</td><td>Référence Code/Loi citée</td><td>Aucune</td></tr>
+      <tr><td>API Aides Jeunes</td><td>Bourses, aides 15-30 ans</td><td>Aucune</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="cerfa">
+  <h2>Transformation formulaires CERFA</h2>
+  <p>OCR local + parse intelligent + pré-remplissage automatique. <strong>Aucune donnée ne quitte votre navigateur</strong> pendant l'OCR (Tesseract.js WASM).</p>
+  <table class="apis-table">
+    <thead><tr><th>CERFA</th><th>Démarche</th><th>Auto-rempli depuis</th></tr></thead>
+    <tbody>
+      <tr><td><code>15692*01</code></td><td>MDPH dossier handicap</td><td>Identité + adresse + revenus FC+</td></tr>
+      <tr><td><code>13750*05</code></td><td>Demande AAH</td><td>Identité + simulation OpenFisca</td></tr>
+      <tr><td><code>13750*06</code></td><td>Renouvellement PCH</td><td>Précédente PCH si autorisée</td></tr>
+      <tr><td><code>2042</code></td><td>Déclaration revenus</td><td>DGFiP pré-rempli FC+</td></tr>
+      <tr><td><code>13754*02</code></td><td>Allocation logement APL</td><td>API Particulier CAF</td></tr>
+      <tr><td><code>14945*02</code></td><td>Carte grise</td><td>ANTS + véhicule SIV</td></tr>
+      <tr><td><code>12101*02</code></td><td>Passeport</td><td>ANTS + état civil FC+</td></tr>
+      <tr><td><code>15776*01</code></td><td>RSA</td><td>Composition + revenus CAF</td></tr>
+      <tr><td><code>12434*04</code></td><td>Réversion retraite CARSAT</td><td>Carrière + identité FC+</td></tr>
+      <tr><td><code>11383*04</code></td><td>Aide juridictionnelle</td><td>Avis fiscal DGFiP</td></tr>
+    </tbody>
+  </table>
+  <p class="note">+ 1490 autres CERFAs disponibles via le catalogue service-public.fr</p>
+</section>
+
+<section id="securite">
+  <h2>🔒 Sécurité — zéro stockage client</h2>
+  <ul class="security-list">
+    <li>✅ <strong>Aucune base de données utilisateur</strong> — pas de comptes, pas de profils stockés</li>
+    <li>✅ Token FranceConnect+ chiffré en <code>sessionStorage</code> (Web Crypto AES-256-GCM)</li>
+    <li>✅ Purge automatique à la fermeture d'onglet (<code>beforeunload</code> + <code>visibilitychange</code>)</li>
+    <li>✅ Edge Functions Netlify <strong>stateless</strong> — aucun log de payload, uniquement métriques techniques</li>
+    <li>✅ Anonymisation locale (Ollama gemma3) avant tout appel LLM cloud — NIR/RIB/adresses jamais transmis en clair</li>
+    <li>✅ LLMs européens prioritaires (Mistral FR) — pas de transfert hors UE par défaut</li>
+    <li>✅ Pas de cookies tiers, pas de tracker, CSP strict</li>
+    <li>✅ Code source <strong>auditable</strong> — repo privé client, audit RGPD/CNIL/AIPD livré</li>
+  </ul>
+</section>
+
+<section id="apis">
+  <h2>APIs LLM gratuites utilisées (anonymisation préalable)</h2>
+  <table class="apis-table">
+    <thead><tr><th>Provider</th><th>Modèle</th><th>Quota</th><th>Usage</th></tr></thead>
+    <tbody>
+      <tr><td>Mistral AI</td><td>mistral-small-latest</td><td>1 req/sec gratuit</td><td>Reformulation FALC, classification</td></tr>
+      <tr><td>Google AI Studio</td><td>gemini-2.5-flash</td><td>1500 req/jour</td><td>Synthèse documents, extraction PDF</td></tr>
+      <tr><td>Groq</td><td>llama-3.3-70b</td><td>30 req/min</td><td>Reasoning, validation conformité</td></tr>
+      <tr><td>HuggingFace</td><td>Inference API</td><td>1000 req/h</td><td>NER (extraction entités: SIRET, NIR, IBAN)</td></tr>
+      <tr><td>Cerebras</td><td>llama-3.3-70b</td><td>30 req/min</td><td>Génération courriers</td></tr>
+      <tr><td>Together AI</td><td>$5 crédit gratuit</td><td>~5M tokens</td><td>Fallback</td></tr>
+      <tr><td>Ollama local</td><td>gemma3:4b, qwen3</td><td>illimité</td><td>Anonymisation pré-cloud (RGPD)</td></tr>
+      <tr><td>LM Studio M1</td><td>qwen3.5-35b, deepseek-r1</td><td>illimité</td><td>Reasoning lourd local</td></tr>
+    </tbody>
+  </table>
+  <p class="note">⚖️ <strong>Tous les documents contenant des PII (NIR, RIB, adresses) sont anonymisés localement</strong> avant tout appel cloud. RGPD-by-design.</p>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Franck Delmas — ALKYMIA / JARVIS OS<br>
+  <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+  <p>Site frère : <a href="https://jarvis-delmas.netlify.app">jarvis-delmas.netlify.app</a></p>
+</section>
+</main>
+
+<footer>
+  <p>© 2026 Service Aide Automatisation · Open-source · RGPD natif · Hébergé sans cookies tiers</p>
+  <p>Conforme RGAA 4.1 niveau AA · WCAG 2.2 niveau AA visé</p>
+</footer>
+
+<script src="assets/a11y.js"></script>
+</body>
+</html>
