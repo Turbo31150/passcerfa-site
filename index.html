@@ -19,7 +19,12 @@
 <header>
   <nav aria-label="Navigation principale">
     <a href="#" class="logo" aria-label="Accueil">🤝 Service Aide</a>
-    <ul>
+    <button id="nav-hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation" class="hamburger">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <ul id="nav-menu">
       <li><a href="#comment-ca-marche">Comment ça marche</a></li>
       <li><a href="#demarches">Démarches</a></li>
       <li><a href="#apis-etat">APIs gouv</a></li>
@@ -28,9 +33,11 @@
       <li><a href="#accessibilite">Accessibilité</a></li>
       <li><a href="tarifs.html" class="nav-tarifs">Tarifs</a></li>
     </ul>
-    <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
-    <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
-    <button id="taille-plus" aria-label="Agrandir le texte" title="Agrandir le texte">A+</button>
+    <div class="nav-a11y">
+      <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
+      <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
+      <button id="taille-plus" aria-label="Agrandir le texte" title="Agrandir le texte">A+</button>
+    </div>
   </nav>
 </header>
 
