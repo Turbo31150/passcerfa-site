@@ -1,0 +1,27 @@
+# Netlify — passcerfa-site (site statique, pas de build)
+[build]
+  publish = "."
+  command = ""
+
+[[redirects]]
+  from = "/app"
+  to = "/app/index.html"
+  status = 200
+
+# SPA fallback pour l'app PWA (routes internes)
+[[redirects]]
+  from = "/app/*"
+  to = "/app/index.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

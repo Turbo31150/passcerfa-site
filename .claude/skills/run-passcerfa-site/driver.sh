@@ -88,9 +88,33 @@ serve() {
   cd "$SITE_DIR" && python3 -m http.server --bind "$bind" "$port"
 }
 
+# app [OUT.png] — screenshot l'APP PWA rendue (JS exécuté).
+# /app/ est un bundle Vite (ES modules + service worker) : file:// NE REND PAS,
+# il faut un origin HTTP. Sert le repo en arrière-plan, attend, screenshote, nettoie.
+app() {
+  local out port srv
+  out=$(safe_out "${1:-app-rendered.png}")
+  port=$((8000 + RANDOM % 1000))
+  ( cd "$SITE_DIR" && exec python3 -m http.server --bind 127.0.0.1 "$port" ) >/dev/null 2>&1 &
+  srv=$!
+  trap 'kill "$srv" 2>/dev/null || true' RETURN
+  sleep 1.5
+  # --virtual-time-budget laisse le JS peupler #app avant la capture
+  timeout 40 "$CHROME" \
+    --headless --disable-gpu --no-sandbox \
+    --hide-scrollbars --window-size=1440,900 \
+    --virtual-time-budget=6000 \
+    --screenshot="$SHOTS/$out" \
+    "http://127.0.0.1:$port/app/" 2>/dev/null
+  local size; size=$(stat -c%s "$SHOTS/$out" 2>/dev/null || echo 0)
+  [ "$size" -lt 5000 ] && { echo "WARN: $out fait ${size}o (probablement blanc — augmenter virtual-time-budget)" >&2; return 1; }
+  echo "OK $out (${size}o) ← http://127.0.0.1:$port/app/ (PWA rendue)"
+}
+
 case "${1:-smoke}" in
   shot)  shift; shot "$@" ;;
   smoke) smoke ;;
+  app)   shift; app "$@" ;;
   serve) shift; serve "$@" ;;
-  *)     echo "Usage: $0 {shot OUT.png [URL|relpath]|smoke|serve [PORT]}" >&2; exit 2 ;;
+  *)     echo "Usage: $0 {shot OUT.png [URL|relpath]|smoke|app [OUT.png]|serve [PORT]}" >&2; exit 2 ;;
 esac

@@ -1,6 +1,6 @@
 ---
 name: run-passcerfa-site
-description: Run, start, build, screenshot, or smoke-test the passcerfa-site static landing + 5 micro-sites (impots/MDPH/AAH/APL/carte-grise). Use when asked to launch the site, take screenshots, audit pages, or verify the GitHub Pages deploy.
+description: Run, start, build, screenshot, or smoke-test the passcerfa-site static landing + interactive /app/ PWA + micro-sites (impots/MDPH/AAH/APL/carte-grise). Use when asked to launch the site, drive the app, take screenshots, audit pages, or verify the GitHub Pages / Netlify deploy.
 ---
 
 # run-passcerfa-site
@@ -14,7 +14,12 @@ section `demarches/`.
 
 **Driver agent** : `.claude/skills/run-passcerfa-site/driver.sh` —
 wrapper `google-chrome-stable --headless` ; sous-commandes
-`shot | smoke | serve`.
+`shot | smoke | app | serve`.
+
+> ⚠️ **Surface interactive = `/app/`** (bundle Vite, ES modules + service
+> worker). `file://` NE LA REND PAS — utiliser `driver.sh app` qui sert en
+> HTTP local puis screenshote l'app rendue (boutons FranceConnect+, Mode
+> agents, Démonstration, Démarche complète).
 
 **Paths** dans ce document : relatifs à la racine du repo
 (`passcerfa-site/`).
@@ -57,9 +62,21 @@ les PNG <5KB et lève une erreur.
 
 | Commande | Effet |
 |---|---|
-| `driver.sh smoke` | 8 pages (1 live + 7 local) |
+| `driver.sh smoke` | 8 pages statiques (1 live + 7 local) |
+| `driver.sh app [OUT.png]` | **app PWA rendue** — serve HTTP + JS exécuté + screenshot (défaut `app-rendered.png`) |
 | `driver.sh shot OUT.png URL_OR_PATH` | 1 page — `https://…`, `/abs/path`, ou `relpath` depuis racine |
 | `driver.sh serve [PORT]` | sert le repo via `python3 -m http.server` (défaut 8000) |
+
+**Driver l'app interactive (vérifié cette session) :**
+
+```bash
+./.claude/skills/run-passcerfa-site/driver.sh app
+# → OK app-rendered.png (91937o) ← http://127.0.0.1:<port>/app/ (PWA rendue)
+```
+
+Le serveur local est auto-démarré sur un port aléatoire (8000-8999),
+attendu 1,5 s, puis tué via `trap RETURN` (aucun orphelin). Le flag
+`--virtual-time-budget=6000` laisse le JS peupler `<main id="app">`.
 
 Variables :
 - `CHROME` = binaire chrome (défaut `google-chrome-stable`)
@@ -84,11 +101,16 @@ python3 -m http.server 8000
 
 ## Build / deploy
 
-Pas de build. Push `main` → GitHub Pages re-déploie sur
-`https://turbo31150.github.io/passcerfa-site/`. Ce skill ne push pas.
+Pas de build (site statique). Deux cibles possibles :
 
-Custom domain (`passcerfa.fr`) n'est PAS encore résolu (NXDOMAIN au
-2026-05-29) ; le live est uniquement sur github.io pour l'instant.
+- **GitHub Pages** (historique) : push `main` → re-déploie sur
+  `https://turbo31150.github.io/passcerfa-site/`.
+- **Netlify** (cible visée) : config `netlify.toml` à la racine
+  (`publish = "."`, pas de build command). Connecter le repo dans
+  Netlify une fois, puis chaque push `main` déclenche le déploiement.
+  Déploiement manuel : `netlify deploy --prod --dir=.` (CLI authentifiée).
+
+Ce skill ne push pas et ne déploie pas — il sert/teste localement.
 
 ## Gotchas
 
@@ -96,9 +118,9 @@ Custom domain (`passcerfa.fr`) n'est PAS encore résolu (NXDOMAIN au
 |---|---|---|
 | `Error code: 401 wrong_secret` dans stderr | GCM tentant login chrome headless container | inoffensif, screenshot réussit. `driver.sh` filtre déjà stderr. |
 | `passcerfa.fr` → HTTP 000 / NXDOMAIN | DNS pas encore configuré | utiliser le `LIVE_BASE` par défaut (github.io) tant que le custom domain n'est pas live |
-| `passcerfa-site.netlify.app` → 404 | site PAS sur Netlify (≠ jarvis-delmas-site) | hébergement = GitHub Pages, pas Netlify |
 | Le micro-site `<key>/` n'a pas d'`index.html` | nouvelle démarche ajoutée sans page | mettre à jour `smoke()` dans `driver.sh` |
-| PNG ~5KB blanc | rare ici (site statique sans JS bloquant) | si occure : ajouter `--virtual-time-budget=5000` au flag chrome |
+| `/app/` blanc en `file://` ou `shot` | bundle Vite (ES modules + SW) exige un origin HTTP | utiliser `driver.sh app` (serve HTTP + virtual-time-budget) |
+| PNG ~5KB blanc sur page statique | rare (site sans JS bloquant) | si occure : ajouter `--virtual-time-budget=5000` au flag chrome |
 
 ## Troubleshooting
 
@@ -111,7 +133,7 @@ Custom domain (`passcerfa.fr`) n'est PAS encore résolu (NXDOMAIN au
 ## Driver source
 
 `./.claude/skills/run-passcerfa-site/driver.sh` (committé). Sous-commandes
-`shot | smoke | serve`. Aucune dépendance hors `bash` + `chrome|chromium`.
+`shot | smoke | app | serve`. Aucune dépendance hors `bash` + `chrome|chromium` + `python3`.
 
 ## Pour aller plus loin
 
