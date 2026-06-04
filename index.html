@@ -28,7 +28,7 @@
       <li><a href="#accessibilite">Accessibilité</a></li>
       <li><a href="tarifs.html" class="nav-tarifs">Tarifs</a></li>
     </ul>
-    <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie">🅰️ Dys</button>
+    <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
     <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
     <button id="taille-plus" aria-label="Agrandir le texte" title="Agrandir le texte">A+</button>
   </nav>
@@ -123,8 +123,9 @@
 <section id="apis-etat">
   <h2>14 APIs gouv branchées (toutes gratuites)</h2>
   <p>Une seule connexion FranceConnect+ → accès à <strong>tout l'écosystème data.gouv</strong>.</p>
-  <table class="apis-table">
-    <thead><tr><th>API</th><th>Usage</th><th>Auth</th></tr></thead>
+  <table class="apis-table" aria-label="APIs gouvernementales intégrées">
+    <caption class="sr-only">Liste des APIs gouvernementales intégrées</caption>
+    <thead><tr><th scope="col">API</th><th scope="col">Usage</th><th scope="col">Auth</th></tr></thead>
     <tbody>
       <tr><td>FranceConnect+</td><td>Identité fédérée (eIDAS substantiel)</td><td>OIDC PKCE</td></tr>
       <tr><td>API Particulier</td><td>Avis fiscal, quotient CAF, attestations Pôle Emploi</td><td>Datapass</td></tr>
@@ -147,8 +148,9 @@
 <section id="cerfa">
   <h2>Transformation formulaires CERFA</h2>
   <p>OCR local + parse intelligent + pré-remplissage automatique. <strong>Aucune donnée ne quitte votre navigateur</strong> pendant l'OCR (Tesseract.js WASM).</p>
-  <table class="apis-table">
-    <thead><tr><th>CERFA</th><th>Démarche</th><th>Auto-rempli depuis</th></tr></thead>
+  <table class="apis-table" aria-label="Formulaires CERFA automatisés">
+    <caption class="sr-only">Formulaires CERFA pris en charge avec pré-remplissage automatique</caption>
+    <thead><tr><th scope="col">CERFA</th><th scope="col">Démarche</th><th scope="col">Auto-rempli depuis</th></tr></thead>
     <tbody>
       <tr><td><code>15692*01</code></td><td>MDPH dossier handicap</td><td>Identité + adresse + revenus FC+</td></tr>
       <tr><td><code>13750*05</code></td><td>Demande AAH</td><td>Identité + simulation OpenFisca</td></tr>
@@ -181,8 +183,9 @@
 
 <section id="apis">
   <h2>APIs LLM gratuites utilisées (anonymisation préalable)</h2>
-  <table class="apis-table">
-    <thead><tr><th>Provider</th><th>Modèle</th><th>Quota</th><th>Usage</th></tr></thead>
+  <table class="apis-table" aria-label="Moteurs IA utilisés">
+    <caption class="sr-only">Moteurs IA locaux et cloud avec quotas et usages</caption>
+    <thead><tr><th scope="col">Provider</th><th scope="col">Modèle</th><th scope="col">Quota</th><th scope="col">Usage</th></tr></thead>
     <tbody>
       <tr><td>Mistral AI</td><td>mistral-small-latest</td><td>1 req/sec gratuit</td><td>Reformulation FALC, classification</td></tr>
       <tr><td>Google AI Studio</td><td>gemini-2.5-flash</td><td>1500 req/jour</td><td>Synthèse documents, extraction PDF</td></tr>
