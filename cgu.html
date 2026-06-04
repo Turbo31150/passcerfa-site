@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions Générales d'Utilisation — Service Aide Automatisation</title>
+<meta name="description" content="Conditions générales d'utilisation du service d'assistance aux démarches administratives.">
+<link rel="canonical" href="https://turbo31150.github.io/passcerfa-site/cgu.html">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<a href="#contenu-principal" class="skip-link">Aller au contenu</a>
+<header role="banner">
+  <nav aria-label="Navigation principale">
+    <a href="/" class="logo" aria-label="Accueil PassCerfa">🤝 PassCerfa</a>
+    <button id="nav-hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation" class="hamburger">
+      <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
+    </button>
+    <ul id="nav-menu">
+      <li><a href="index.html">← Accueil</a></li>
+      <li><a href="tarifs.html" class="nav-tarifs">Tarifs</a></li>
+      <li><a href="mentions-legales.html">Mentions légales</a></li>
+    </ul>
+    <div class="nav-a11y">
+      <button id="dyslexie-toggle" aria-pressed="false" aria-label="Activer la police dyslexique">🅰️ Dys</button>
+      <button id="contrast-toggle" aria-pressed="false" aria-label="Activer le contraste élevé">🌓 Contraste</button>
+      <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    </div>
+  </nav>
+</header>
+
+<main id="contenu-principal" style="max-width:800px;margin:0 auto;padding:2rem 1.5rem">
+  <h1>Conditions Générales d'Utilisation</h1>
+  <p><em>Dernière mise à jour : juin 2026</em></p>
+
+  <h2>1. Objet</h2>
+  <p>Les présentes Conditions Générales d'Utilisation (CGU) régissent l'accès et l'utilisation du service <strong>Service Aide Automatisation</strong> (ci-après « le Service »), accessible à l'adresse <a href="https://turbo31150.github.io/passcerfa-site/">turbo31150.github.io/passcerfa-site</a>.</p>
+  <p>Le Service a pour objet d'assister les utilisateurs dans la réalisation de démarches administratives françaises, en recourant à des agents IA locaux et à des APIs publiques officielles (data.gouv.fr, DGFiP, CAF, ANTS, etc.).</p>
+
+  <h2>2. Acceptation des CGU</h2>
+  <p>L'accès et l'utilisation du Service impliquent l'acceptation pleine et entière des présentes CGU. Si vous n'acceptez pas ces conditions, vous devez cesser d'utiliser le Service.</p>
+
+  <h2>3. Accès au service</h2>
+  <p>Le Service est accessible :</p>
+  <ul>
+    <li><strong>Mode Découverte (gratuit)</strong> : 5 démarches, sans inscription.</li>
+    <li><strong>Mode Autonomie (8,90 €/mois)</strong> : 30 démarches, assistance IA étendue.</li>
+    <li><strong>Mode Structure (49 €/mois)</strong> : accès multi-utilisateurs pour structures médico-sociales.</li>
+    <li><strong>Mode Intégration SI (sur devis)</strong> : déploiement dédié avec SLA.</li>
+  </ul>
+  <p>L'éditeur se réserve le droit de modifier, suspendre ou interrompre l'accès au Service à tout moment, notamment pour maintenance.</p>
+
+  <h2>4. Données personnelles</h2>
+  <p>Le Service est conçu selon le principe <strong>zéro stockage serveur</strong> :</p>
+  <ul>
+    <li>Les données récupérées via FranceConnect+ sont traitées uniquement en mémoire de session (sessionStorage chiffré AES-256-GCM).</li>
+    <li>Aucune donnée personnelle n'est conservée sur les serveurs du Service après fermeture de l'onglet.</li>
+    <li>L'anonymisation des données sensibles (NIR, IBAN, adresses) est effectuée localement avant tout appel à un LLM cloud.</li>
+  </ul>
+  <p>Pour plus de détails, consultez notre <a href="confidentialite.html">Politique de confidentialité</a>.</p>
+
+  <h2>5. Responsabilités</h2>
+  <p><strong>Limitations :</strong></p>
+  <ul>
+    <li>Le Service fournit une <strong>assistance</strong> et non un service de conseil juridique, fiscal ou administratif officiel.</li>
+    <li>Les simulations de droits (RSA, APL, AAH) sont <strong>indicatives</strong> et ne constituent pas une décision administrative.</li>
+    <li>L'éditeur décline toute responsabilité en cas d'erreur dans les données récupérées auprès des administrations via leurs APIs officielles.</li>
+    <li>L'utilisateur reste seul responsable des informations qu'il saisit et transmet aux administrations.</li>
+  </ul>
+
+  <h2>6. Propriété intellectuelle</h2>
+  <p>Le code source du Service est publié sous licence <strong>MIT</strong>. Les marques, logos et contenus éditoriaux restent la propriété de l'éditeur. Les APIs et données publiques utilisées (data.gouv.fr, OpenFisca, API BAN, etc.) sont soumises à leurs licences respectives (Licence Ouverte / Open Licence Etalab).</p>
+
+  <h2>7. Utilisation acceptable</h2>
+  <p>L'utilisateur s'engage à :</p>
+  <ul>
+    <li>Ne pas utiliser le Service à des fins frauduleuses ou illicites.</li>
+    <li>Ne pas tenter de contourner les mécanismes de sécurité.</li>
+    <li>Ne pas automatiser l'accès au Service de façon abusive (scraping massif, robots).</li>
+    <li>Ne pas usurper l'identité d'un tiers via FranceConnect+.</li>
+  </ul>
+
+  <h2>8. Modification des CGU</h2>
+  <p>L'éditeur se réserve le droit de modifier les présentes CGU à tout moment. Les utilisateurs seront informés des modifications substantielles. La poursuite de l'utilisation du Service après modification vaut acceptation des nouvelles CGU.</p>
+
+  <h2>9. Droit applicable et juridiction</h2>
+  <p>Les présentes CGU sont soumises au droit français. En cas de litige, les parties s'engagent à rechercher une solution amiable avant tout recours judiciaire. À défaut, les tribunaux français compétents seront saisis.</p>
+
+  <h2>10. Contact</h2>
+  <p>Pour toute question relative aux présentes CGU : <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+</main>
+
+<footer>
+  <p>PassCerfa — assistance démarches administratives FR · <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+  <p><a href="mentions-legales.html">Mentions légales</a> · <a href="confidentialite.html">Confidentialité</a> · <a href="cgu.html">CGU</a> · <a href="accessibilite.html">Déclaration accessibilité</a> · <a href="tarifs.html">Tarifs</a></p>
+</footer>
+<script src="assets/a11y.js"></script>
+</body>
+</html>
