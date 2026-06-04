@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ameli — Assurance Maladie — PassCerfa</title>
-<meta name="description" content="Carte Vitale, remboursements, attestations, rendez-vous médecin.">
-<meta name="keywords" content="Ameli, carte vitale, remboursements, Assurance Maladie">
-<meta property="og:title" content="Ameli — Assurance Maladie — PassCerfa">
-<meta property="og:description" content="Carte Vitale, remboursements, attestations, rendez-vous médecin.">
+<title>Ameli — Assurance maladie — PassCerfa</title>
+<meta name="description" content="Consultez vos remboursements, téléchargez vos attestations, gérez votre dossier maladie. Via FranceConnect+.">
+<meta name="keywords" content="ameli, assurance maladie, remboursements, attestation droits, médecin traitant">
+<meta property="og:title" content="Ameli — Assurance maladie — PassCerfa">
+<meta property="og:description" content="Consultez vos remboursements, téléchargez vos attestations, gérez votre dossier maladie. Via FranceConnect+.">
+<meta property="og:image" content="https://turbo31150.github.io/passcerfa-site/assets/og-card.png">
 <link rel="canonical" href="https://turbo31150.github.io/passcerfa-site/demarches/ameli.html">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Ameli — Assurance Maladie","description":"Carte Vitale, remboursements, attestations, rendez-vous médecin.","inLanguage":"fr","url":"https://turbo31150.github.io/passcerfa-site/demarches/ameli.html"}
+{"@context":"https://schema.org","@type":"WebPage","name":"Ameli — Espace assuré santé","description":"Consultez vos remboursements, téléchargez vos attestations, gérez votre dossier maladie. Via FranceConnect+.","inLanguage":"fr","url":"https://turbo31150.github.io/passcerfa-site/demarches/ameli.html"}
 </script>
 </head>
 <body>
@@ -20,21 +21,30 @@
 <header role="banner">
   <nav aria-label="Navigation principale">
     <a href="../" class="logo" aria-label="Accueil PassCerfa">🤝 PassCerfa</a>
-    <ul>
+    <button id="nav-hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation" class="hamburger">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <ul id="nav-menu">
       <li><a href="../#comment-ca-marche">Comment ça marche</a></li>
       <li><a href="../#demarches">Démarches</a></li>
       <li><a href="../tarifs.html" class="nav-tarifs">Tarifs</a></li>
       <li><a href="../#accessibilite">Accessibilité</a></li>
     </ul>
-    <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
-    <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
-    <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    <div class="nav-a11y">
+      <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
+      <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
+      <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    </div>
   </nav>
 </header>
 <main id="contenu-principal">
+
 <section class="hero" style="padding:3rem 1rem 2rem">
-  <h1>Ameli — Assurance Maladie</h1>
-  <p class="lead">Carte Vitale, remboursements, attestations, rendez-vous médecin.</p>
+  <h1>Ameli — Espace assuré santé</h1>
+  <p class="lead">Consultez vos remboursements, téléchargez vos attestations, gérez votre dossier maladie. Via FranceConnect+.</p>
+  <p style="font-size:.9rem;opacity:.7">📊 720K recherches/mois · Publics : Tous assurés — seniors, personnes avec handicap visuel/moteur</p>
   <div class="cta">
     <a href="../tarifs.html" class="btn btn-fc">Commencer — voir les forfaits</a>
     <a href="../" class="btn btn-secondary">← Retour accueil</a>
@@ -43,40 +53,50 @@
 </section>
 
 <section id="processus" style="max-width:800px;margin:2rem auto;padding:0 1rem">
-  <h2>Comment ça se passe</h2>
+  <h2>Comment ça se passe — étape par étape</h2>
   <ol class="steps">
-    <li><strong>1 — Identification</strong> : vous vous connectez une fois sur FranceConnect+ (impôts, Ameli, ou La Poste Identité Numérique).</li>
-    <li><strong>2 — Récupération automatique</strong> : PassCerfa récupère vos données auprès de l'administration concernée via les APIs officielles gouv.fr.</li>
-    <li><strong>3 — Pré-remplissage</strong> : le formulaire est rempli automatiquement. Vous vérifiez chaque champ.</li>
-    <li><strong>4 — Envoi sécurisé</strong> : soumission directe au service public concerné. Vous recevez le récépissé.</li>
-    <li><strong>5 — Purge</strong> : à la fermeture de l'onglet, toutes les données disparaissent. Rien n'est conservé côté serveur.</li>
+    <li><strong>1 — Identification FranceConnect+</strong> : Connexion via Ameli ou identité numérique La Poste.</li>
+    <li><strong>2 — Consultation remboursements</strong> : Historique des soins et remboursements des 6 derniers mois.</li>
+    <li><strong>3 — Téléchargement attestation</strong> : Attestation de droits à la Sécurité Sociale téléchargeable en PDF.</li>
+    <li><strong>4 — Médecin traitant</strong> : Déclaration ou changement de médecin traitant directement en ligne.</li>
+    <li><strong>5 — Purge sécurisée</strong> : Données médicales purgées à la fermeture de l'onglet.</li>
   </ol>
 </section>
 
 <section style="max-width:800px;margin:2rem auto;padding:0 1rem">
+  <h2>Accès directs — services officiels</h2>
+  <p>Liens officiels vérifiés vers les vrais services de l'État :</p>
+  <div data-liens="ameli"></div>
+</section>
+
+
+
+<section style="max-width:800px;margin:2rem auto;padding:0 1rem">
   <h2>Accessibilité — modes disponibles</h2>
   <ul class="security-list">
-    <li>✅ Mode <strong>dyslexie</strong> (police OpenDyslexic, espacement augmenté)</li>
-    <li>✅ Mode <strong>contraste élevé</strong> (fond noir, texte blanc)</li>
-    <li>✅ Agrandissement texte jusqu'à 24px</li>
-    <li>✅ Navigation clavier complète</li>
+    <li>✅ Mode <strong>dyslexie</strong> (police OpenDyslexic, espacement augmenté, fond beige)</li>
+    <li>✅ Mode <strong>contraste élevé</strong> (fond noir, texte blanc, accents jaunes)</li>
+    <li>✅ Agrandissement texte progressif jusqu'à 24px</li>
+    <li>✅ Navigation clavier complète (Tab, Escape, Enter)</li>
     <li>✅ Compatible lecteur d'écran (NVDA, JAWS, VoiceOver)</li>
-    <li>✅ Interface FALC disponible sur demande (Forfait Autonomie+)</li>
+    <li>✅ Interface FALC disponible via l'assistant IA (Forfait Autonomie+)</li>
+    <li>✅ Respect <code>prefers-reduced-motion</code></li>
   </ul>
 </section>
 
 <section id="tarifs-mini" style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--priority);border-radius:var(--radius)">
   <h2>Accès à cette démarche</h2>
-  <p>Cette démarche est disponible à partir du <strong>Forfait Découverte (gratuit)</strong> pour les 5 démarches prioritaires, ou incluse dans <strong>Forfait Autonomie à 8,90 €/mois</strong> (30 démarches).</p>
-  <a href="../tarifs.html" class="btn btn-fc" style="margin-top:1rem">Voir les forfaits →</a>
+  <p>Cette démarche est disponible à partir du <strong>Forfait Découverte (gratuit)</strong> pour les 5 démarches prioritaires, ou incluse dans le <strong>Forfait Autonomie à 8,90 €/mois</strong> (30 démarches complètes).</p>
+  <a href="../tarifs.html" class="btn btn-fc" style="margin-top:1rem">Voir les forfaits détaillés →</a>
 </section>
-</main>
 
+</main>
 <footer>
-  <p>PassCerfa — assistance démarches admin FR — <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+  <p>PassCerfa — assistance démarches administratives FR · <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
   <p><a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../accessibilite.html">Déclaration accessibilité</a> · <a href="../tarifs.html">Tarifs</a></p>
   <p style="font-size:.8rem;opacity:.6">Site frère : <a href="https://jarvis-delmas.netlify.app">jarvis-delmas.netlify.app</a></p>
 </footer>
 <script src="../assets/a11y.js"></script>
+<script src="../assets/api-widgets.js"></script>
 </body>
 </html>

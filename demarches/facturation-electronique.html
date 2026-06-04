@@ -3,16 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Facturation électronique 2026 — PassCerfa</title>
-<meta name="description" content="Factur-X, PDP agréée, conformité DGFIP TPE/PME obligatoire 2026.">
-<meta name="keywords" content="facturation électronique, Factur-X, PDP, DGFiP 2026, TVA">
-<meta property="og:title" content="Facturation électronique 2026 — PassCerfa">
-<meta property="og:description" content="Factur-X, PDP agréée, conformité DGFIP TPE/PME obligatoire 2026.">
+<title>Facturation électronique PDP 2026 — PassCerfa</title>
+<meta name="description" content="Conformez-vous à la réforme facturation électronique 2026. Chorus Pro, PDP, Factur-X. Guide TPE/PME.">
+<meta name="keywords" content="facturation électronique, PDP, Chorus Pro, Factur-X, 2026, DGFiP, TVA, e-invoicing">
+<meta property="og:title" content="Facturation électronique PDP 2026 — PassCerfa">
+<meta property="og:description" content="Conformez-vous à la réforme facturation électronique 2026. Chorus Pro, PDP, Factur-X. Guide TPE/PME.">
+<meta property="og:image" content="https://turbo31150.github.io/passcerfa-site/assets/og-card.png">
 <link rel="canonical" href="https://turbo31150.github.io/passcerfa-site/demarches/facturation-electronique.html">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"Facturation électronique 2026","description":"Factur-X, PDP agréée, conformité DGFIP TPE/PME obligatoire 2026.","inLanguage":"fr","url":"https://turbo31150.github.io/passcerfa-site/demarches/facturation-electronique.html"}
+{"@context":"https://schema.org","@type":"WebPage","name":"Facturation électronique — Réforme PDP 2026","description":"Conformez-vous à la réforme facturation électronique 2026. Chorus Pro, PDP, Factur-X. Guide TPE/PME.","inLanguage":"fr","url":"https://turbo31150.github.io/passcerfa-site/demarches/facturation-electronique.html"}
 </script>
 </head>
 <body>
@@ -20,21 +21,30 @@
 <header role="banner">
   <nav aria-label="Navigation principale">
     <a href="../" class="logo" aria-label="Accueil PassCerfa">🤝 PassCerfa</a>
-    <ul>
+    <button id="nav-hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation" class="hamburger">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <ul id="nav-menu">
       <li><a href="../#comment-ca-marche">Comment ça marche</a></li>
       <li><a href="../#demarches">Démarches</a></li>
       <li><a href="../tarifs.html" class="nav-tarifs">Tarifs</a></li>
       <li><a href="../#accessibilite">Accessibilité</a></li>
     </ul>
-    <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
-    <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
-    <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    <div class="nav-a11y">
+      <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
+      <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
+      <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    </div>
   </nav>
 </header>
 <main id="contenu-principal">
+
 <section class="hero" style="padding:3rem 1rem 2rem">
-  <h1>Facturation électronique 2026</h1>
-  <p class="lead">Factur-X, PDP agréée, conformité DGFIP TPE/PME obligatoire 2026.</p>
+  <h1>Facturation électronique — Réforme PDP 2026</h1>
+  <p class="lead">Conformez-vous à la réforme facturation électronique 2026. Chorus Pro, PDP, Factur-X. Guide TPE/PME.</p>
+  <p style="font-size:.9rem;opacity:.7">📊 340K recherches/mois · Publics : TPE/PME, auto-entrepreneurs, comptables, profils techniques</p>
   <div class="cta">
     <a href="../tarifs.html" class="btn btn-fc">Commencer — voir les forfaits</a>
     <a href="../" class="btn btn-secondary">← Retour accueil</a>
@@ -43,40 +53,50 @@
 </section>
 
 <section id="processus" style="max-width:800px;margin:2rem auto;padding:0 1rem">
-  <h2>Comment ça se passe</h2>
+  <h2>Comment ça se passe — étape par étape</h2>
   <ol class="steps">
-    <li><strong>1 — Identification</strong> : vous vous connectez une fois sur FranceConnect+ (impôts, Ameli, ou La Poste Identité Numérique).</li>
-    <li><strong>2 — Récupération automatique</strong> : PassCerfa récupère vos données auprès de l'administration concernée via les APIs officielles gouv.fr.</li>
-    <li><strong>3 — Pré-remplissage</strong> : le formulaire est rempli automatiquement. Vous vérifiez chaque champ.</li>
-    <li><strong>4 — Envoi sécurisé</strong> : soumission directe au service public concerné. Vous recevez le récépissé.</li>
-    <li><strong>5 — Purge</strong> : à la fermeture de l'onglet, toutes les données disparaissent. Rien n'est conservé côté serveur.</li>
+    <li><strong>1 — Diagnostic obligatoire</strong> : Vérification de votre obligation selon votre taille d'entreprise et secteur.</li>
+    <li><strong>2 — Choix PDP ou PPF</strong> : Sélection d'une Plateforme de Dématérialisation Partenaire ou Portail Public de Facturation.</li>
+    <li><strong>3 — Paramétrage Chorus Pro</strong> : Configuration de votre espace Chorus Pro pour les factures avec le secteur public.</li>
+    <li><strong>4 — Formatage Factur-X</strong> : Génération de factures PDF/A-3 avec données XML embarquées (norme EN 16931).</li>
+    <li><strong>5 — Déclaration TVA automatique</strong> : Transmission automatique des données TVA à la DGFiP via votre PDP.</li>
   </ol>
 </section>
 
 <section style="max-width:800px;margin:2rem auto;padding:0 1rem">
+  <h2>Accès directs — services officiels</h2>
+  <p>Liens officiels vérifiés vers les vrais services de l'État :</p>
+  <div data-liens="facturation"></div>
+</section>
+
+
+
+<section style="max-width:800px;margin:2rem auto;padding:0 1rem">
   <h2>Accessibilité — modes disponibles</h2>
   <ul class="security-list">
-    <li>✅ Mode <strong>dyslexie</strong> (police OpenDyslexic, espacement augmenté)</li>
-    <li>✅ Mode <strong>contraste élevé</strong> (fond noir, texte blanc)</li>
-    <li>✅ Agrandissement texte jusqu'à 24px</li>
-    <li>✅ Navigation clavier complète</li>
+    <li>✅ Mode <strong>dyslexie</strong> (police OpenDyslexic, espacement augmenté, fond beige)</li>
+    <li>✅ Mode <strong>contraste élevé</strong> (fond noir, texte blanc, accents jaunes)</li>
+    <li>✅ Agrandissement texte progressif jusqu'à 24px</li>
+    <li>✅ Navigation clavier complète (Tab, Escape, Enter)</li>
     <li>✅ Compatible lecteur d'écran (NVDA, JAWS, VoiceOver)</li>
-    <li>✅ Interface FALC disponible sur demande (Forfait Autonomie+)</li>
+    <li>✅ Interface FALC disponible via l'assistant IA (Forfait Autonomie+)</li>
+    <li>✅ Respect <code>prefers-reduced-motion</code></li>
   </ul>
 </section>
 
 <section id="tarifs-mini" style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--priority);border-radius:var(--radius)">
   <h2>Accès à cette démarche</h2>
-  <p>Cette démarche est disponible à partir du <strong>Forfait Découverte (gratuit)</strong> pour les 5 démarches prioritaires, ou incluse dans <strong>Forfait Autonomie à 8,90 €/mois</strong> (30 démarches).</p>
-  <a href="../tarifs.html" class="btn btn-fc" style="margin-top:1rem">Voir les forfaits →</a>
+  <p>Cette démarche est disponible à partir du <strong>Forfait Découverte (gratuit)</strong> pour les 5 démarches prioritaires, ou incluse dans le <strong>Forfait Autonomie à 8,90 €/mois</strong> (30 démarches complètes).</p>
+  <a href="../tarifs.html" class="btn btn-fc" style="margin-top:1rem">Voir les forfaits détaillés →</a>
 </section>
-</main>
 
+</main>
 <footer>
-  <p>PassCerfa — assistance démarches admin FR — <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+  <p>PassCerfa — assistance démarches administratives FR · <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
   <p><a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../accessibilite.html">Déclaration accessibilité</a> · <a href="../tarifs.html">Tarifs</a></p>
   <p style="font-size:.8rem;opacity:.6">Site frère : <a href="https://jarvis-delmas.netlify.app">jarvis-delmas.netlify.app</a></p>
 </footer>
 <script src="../assets/a11y.js"></script>
+<script src="../assets/api-widgets.js"></script>
 </body>
 </html>

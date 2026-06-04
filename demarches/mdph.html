@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MDPH — Dossier handicap — PassCerfa</title>
-<meta name="description" content="Dossier MDPH 15692, carte mobilité, renouvellement, recours CDAPH.">
-<meta name="keywords" content="MDPH, dossier handicap, CDAPH, carte mobilité, PCH">
+<meta name="description" content="Constituez ou renouvelez votre dossier MDPH. Formulaire CERFA 15692 pré-rempli. Adapté aux profils cognitifs et visuels.">
+<meta name="keywords" content="MDPH, handicap, CERFA 15692, AAH, PCH, carte mobilité, dossier renouvellement">
 <meta property="og:title" content="MDPH — Dossier handicap — PassCerfa">
-<meta property="og:description" content="Dossier MDPH 15692, carte mobilité, renouvellement, recours CDAPH.">
+<meta property="og:description" content="Constituez ou renouvelez votre dossier MDPH. Formulaire CERFA 15692 pré-rempli. Adapté aux profils cognitifs et visuels.">
+<meta property="og:image" content="https://turbo31150.github.io/passcerfa-site/assets/og-card.png">
 <link rel="canonical" href="https://turbo31150.github.io/passcerfa-site/demarches/mdph.html">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"MDPH — Dossier handicap","description":"Dossier MDPH 15692, carte mobilité, renouvellement, recours CDAPH.","inLanguage":"fr","url":"https://turbo31150.github.io/passcerfa-site/demarches/mdph.html"}
+{"@context":"https://schema.org","@type":"WebPage","name":"MDPH — Dossier handicap (CERFA 15692)","description":"Constituez ou renouvelez votre dossier MDPH. Formulaire CERFA 15692 pré-rempli. Adapté aux profils cognitifs et visuels.","inLanguage":"fr","url":"https://turbo31150.github.io/passcerfa-site/demarches/mdph.html"}
 </script>
 </head>
 <body>
@@ -20,21 +21,30 @@
 <header role="banner">
   <nav aria-label="Navigation principale">
     <a href="../" class="logo" aria-label="Accueil PassCerfa">🤝 PassCerfa</a>
-    <ul>
+    <button id="nav-hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation" class="hamburger">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <ul id="nav-menu">
       <li><a href="../#comment-ca-marche">Comment ça marche</a></li>
       <li><a href="../#demarches">Démarches</a></li>
       <li><a href="../tarifs.html" class="nav-tarifs">Tarifs</a></li>
       <li><a href="../#accessibilite">Accessibilité</a></li>
     </ul>
-    <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
-    <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
-    <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    <div class="nav-a11y">
+      <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
+      <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
+      <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    </div>
   </nav>
 </header>
 <main id="contenu-principal">
+
 <section class="hero" style="padding:3rem 1rem 2rem">
-  <h1>MDPH — Dossier handicap</h1>
-  <p class="lead">Dossier MDPH 15692, carte mobilité, renouvellement, recours CDAPH.</p>
+  <h1>MDPH — Dossier handicap (CERFA 15692)</h1>
+  <p class="lead">Constituez ou renouvelez votre dossier MDPH. Formulaire CERFA 15692 pré-rempli. Adapté aux profils cognitifs et visuels.</p>
+  <p style="font-size:.9rem;opacity:.7">📊 410K recherches/mois · Publics : Personnes en situation de handicap cognitif, visuel, moteur — aidants</p>
   <div class="cta">
     <a href="../tarifs.html" class="btn btn-fc">Commencer — voir les forfaits</a>
     <a href="../" class="btn btn-secondary">← Retour accueil</a>
@@ -43,40 +53,50 @@
 </section>
 
 <section id="processus" style="max-width:800px;margin:2rem auto;padding:0 1rem">
-  <h2>Comment ça se passe</h2>
+  <h2>Comment ça se passe — étape par étape</h2>
   <ol class="steps">
-    <li><strong>1 — Identification</strong> : vous vous connectez une fois sur FranceConnect+ (impôts, Ameli, ou La Poste Identité Numérique).</li>
-    <li><strong>2 — Récupération automatique</strong> : PassCerfa récupère vos données auprès de l'administration concernée via les APIs officielles gouv.fr.</li>
-    <li><strong>3 — Pré-remplissage</strong> : le formulaire est rempli automatiquement. Vous vérifiez chaque champ.</li>
-    <li><strong>4 — Envoi sécurisé</strong> : soumission directe au service public concerné. Vous recevez le récépissé.</li>
-    <li><strong>5 — Purge</strong> : à la fermeture de l'onglet, toutes les données disparaissent. Rien n'est conservé côté serveur.</li>
+    <li><strong>1 — Identification FranceConnect+</strong> : Connexion via impôts ou Ameli. Données d'identité récupérées automatiquement.</li>
+    <li><strong>2 — Pré-remplissage CERFA 15692</strong> : Identité, adresse, coordonnées médicales pré-remplies depuis vos données FC+.</li>
+    <li><strong>3 — Compléments médicaux</strong> : Vous ajoutez les pièces médicales (certificat médical, justificatifs de soins).</li>
+    <li><strong>4 — Envoi à votre MDPH</strong> : Soumission directe à la MDPH de votre département. Récépissé avec numéro de suivi.</li>
+    <li><strong>5 — Suivi dossier</strong> : Notification automatique dès mise à jour de votre dossier.</li>
   </ol>
 </section>
 
 <section style="max-width:800px;margin:2rem auto;padding:0 1rem">
+  <h2>Accès directs — services officiels</h2>
+  <p>Liens officiels vérifiés vers les vrais services de l'État :</p>
+  <div data-liens="mdph"></div>
+</section>
+
+
+
+<section style="max-width:800px;margin:2rem auto;padding:0 1rem">
   <h2>Accessibilité — modes disponibles</h2>
   <ul class="security-list">
-    <li>✅ Mode <strong>dyslexie</strong> (police OpenDyslexic, espacement augmenté)</li>
-    <li>✅ Mode <strong>contraste élevé</strong> (fond noir, texte blanc)</li>
-    <li>✅ Agrandissement texte jusqu'à 24px</li>
-    <li>✅ Navigation clavier complète</li>
+    <li>✅ Mode <strong>dyslexie</strong> (police OpenDyslexic, espacement augmenté, fond beige)</li>
+    <li>✅ Mode <strong>contraste élevé</strong> (fond noir, texte blanc, accents jaunes)</li>
+    <li>✅ Agrandissement texte progressif jusqu'à 24px</li>
+    <li>✅ Navigation clavier complète (Tab, Escape, Enter)</li>
     <li>✅ Compatible lecteur d'écran (NVDA, JAWS, VoiceOver)</li>
-    <li>✅ Interface FALC disponible sur demande (Forfait Autonomie+)</li>
+    <li>✅ Interface FALC disponible via l'assistant IA (Forfait Autonomie+)</li>
+    <li>✅ Respect <code>prefers-reduced-motion</code></li>
   </ul>
 </section>
 
 <section id="tarifs-mini" style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--priority);border-radius:var(--radius)">
   <h2>Accès à cette démarche</h2>
-  <p>Cette démarche est disponible à partir du <strong>Forfait Découverte (gratuit)</strong> pour les 5 démarches prioritaires, ou incluse dans <strong>Forfait Autonomie à 8,90 €/mois</strong> (30 démarches).</p>
-  <a href="../tarifs.html" class="btn btn-fc" style="margin-top:1rem">Voir les forfaits →</a>
+  <p>Cette démarche est disponible à partir du <strong>Forfait Découverte (gratuit)</strong> pour les 5 démarches prioritaires, ou incluse dans le <strong>Forfait Autonomie à 8,90 €/mois</strong> (30 démarches complètes).</p>
+  <a href="../tarifs.html" class="btn btn-fc" style="margin-top:1rem">Voir les forfaits détaillés →</a>
 </section>
-</main>
 
+</main>
 <footer>
-  <p>PassCerfa — assistance démarches admin FR — <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+  <p>PassCerfa — assistance démarches administratives FR · <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
   <p><a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../accessibilite.html">Déclaration accessibilité</a> · <a href="../tarifs.html">Tarifs</a></p>
   <p style="font-size:.8rem;opacity:.6">Site frère : <a href="https://jarvis-delmas.netlify.app">jarvis-delmas.netlify.app</a></p>
 </footer>
 <script src="../assets/a11y.js"></script>
+<script src="../assets/api-widgets.js"></script>
 </body>
 </html>

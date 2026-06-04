@@ -4,15 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>AAH — Allocation Adulte Handicapé — PassCerfa</title>
-<meta name="description" content="Demande AAH 13750, renouvellement, simulation montant, recours.">
-<meta name="keywords" content="AAH, allocation adulte handicapé, MDPH, CDAPH, handicap">
+<meta name="description" content="Demandez ou renouvelez l'AAH. Simulez votre éligibilité. CERFA 13750 pré-rempli via FranceConnect+.">
+<meta name="keywords" content="AAH, allocation adulte handicapé, CERFA 13750, taux incapacité, MDPH">
 <meta property="og:title" content="AAH — Allocation Adulte Handicapé — PassCerfa">
-<meta property="og:description" content="Demande AAH 13750, renouvellement, simulation montant, recours.">
+<meta property="og:description" content="Demandez ou renouvelez l'AAH. Simulez votre éligibilité. CERFA 13750 pré-rempli via FranceConnect+.">
+<meta property="og:image" content="https://turbo31150.github.io/passcerfa-site/assets/og-card.png">
 <link rel="canonical" href="https://turbo31150.github.io/passcerfa-site/demarches/aah.html">
 <link rel="stylesheet" href="../assets/style.css">
 <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","name":"AAH — Allocation Adulte Handicapé","description":"Demande AAH 13750, renouvellement, simulation montant, recours.","inLanguage":"fr","url":"https://turbo31150.github.io/passcerfa-site/demarches/aah.html"}
+{"@context":"https://schema.org","@type":"WebPage","name":"AAH — Allocation Adulte Handicapé (CERFA 13750)","description":"Demandez ou renouvelez l'AAH. Simulez votre éligibilité. CERFA 13750 pré-rempli via FranceConnect+.","inLanguage":"fr","url":"https://turbo31150.github.io/passcerfa-site/demarches/aah.html"}
 </script>
 </head>
 <body>
@@ -20,21 +21,30 @@
 <header role="banner">
   <nav aria-label="Navigation principale">
     <a href="../" class="logo" aria-label="Accueil PassCerfa">🤝 PassCerfa</a>
-    <ul>
+    <button id="nav-hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Ouvrir le menu de navigation" class="hamburger">
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+      <span class="hamburger-bar"></span>
+    </button>
+    <ul id="nav-menu">
       <li><a href="../#comment-ca-marche">Comment ça marche</a></li>
       <li><a href="../#demarches">Démarches</a></li>
       <li><a href="../tarifs.html" class="nav-tarifs">Tarifs</a></li>
       <li><a href="../#accessibilite">Accessibilité</a></li>
     </ul>
-    <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
-    <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
-    <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    <div class="nav-a11y">
+      <button id="dyslexie-toggle" aria-pressed="false" title="Mode dyslexie" aria-label="Activer la police dyslexique">🅰️ Dys</button>
+      <button id="contrast-toggle" aria-pressed="false" title="Contraste élevé" aria-label="Activer le contraste élevé">🌓 Contraste</button>
+      <button id="taille-plus" aria-label="Agrandir le texte">A+</button>
+    </div>
   </nav>
 </header>
 <main id="contenu-principal">
+
 <section class="hero" style="padding:3rem 1rem 2rem">
-  <h1>AAH — Allocation Adulte Handicapé</h1>
-  <p class="lead">Demande AAH 13750, renouvellement, simulation montant, recours.</p>
+  <h1>AAH — Allocation Adulte Handicapé (CERFA 13750)</h1>
+  <p class="lead">Demandez ou renouvelez l'AAH. Simulez votre éligibilité. CERFA 13750 pré-rempli via FranceConnect+.</p>
+  <p style="font-size:.9rem;opacity:.7">📊 290K recherches/mois · Publics : Personnes en situation de handicap — profils cognitifs principalement</p>
   <div class="cta">
     <a href="../tarifs.html" class="btn btn-fc">Commencer — voir les forfaits</a>
     <a href="../" class="btn btn-secondary">← Retour accueil</a>
@@ -43,40 +53,54 @@
 </section>
 
 <section id="processus" style="max-width:800px;margin:2rem auto;padding:0 1rem">
-  <h2>Comment ça se passe</h2>
+  <h2>Comment ça se passe — étape par étape</h2>
   <ol class="steps">
-    <li><strong>1 — Identification</strong> : vous vous connectez une fois sur FranceConnect+ (impôts, Ameli, ou La Poste Identité Numérique).</li>
-    <li><strong>2 — Récupération automatique</strong> : PassCerfa récupère vos données auprès de l'administration concernée via les APIs officielles gouv.fr.</li>
-    <li><strong>3 — Pré-remplissage</strong> : le formulaire est rempli automatiquement. Vous vérifiez chaque champ.</li>
-    <li><strong>4 — Envoi sécurisé</strong> : soumission directe au service public concerné. Vous recevez le récépissé.</li>
-    <li><strong>5 — Purge</strong> : à la fermeture de l'onglet, toutes les données disparaissent. Rien n'est conservé côté serveur.</li>
+    <li><strong>1 — Simulation éligibilité</strong> : Calcul indicatif basé sur vos revenus et taux d'incapacité reconnu par la MDPH.</li>
+    <li><strong>2 — Identification FranceConnect+</strong> : Connexion via impôts ou Ameli. Revenus récupérés automatiquement.</li>
+    <li><strong>3 — Pré-remplissage CERFA 13750</strong> : Identité, revenus, composition foyer remplis automatiquement.</li>
+    <li><strong>4 — Envoi MDPH</strong> : Dossier complet transmis à votre MDPH. Récépissé avec délai de traitement estimé.</li>
+    <li><strong>5 — Suivi & renouvellement</strong> : Rappel automatique 3 mois avant expiration des droits.</li>
   </ol>
+</section>
+
+<section style="max-width:800px;margin:2rem auto;padding:0 1rem">
+  <h2>Accès directs — services officiels</h2>
+  <p>Liens officiels vérifiés vers les vrais services de l'État :</p>
+  <div data-liens="aah"></div>
+</section>
+
+<section style="max-width:800px;margin:2rem auto;padding:0 1rem">
+  <h2>Simulateur — estimation de vos droits</h2>
+  <p>Estimation indicative basée sur l'API OpenFisca France (données publiques). Résultat non contractuel.</p>
+  <div data-simulateur="aah"></div>
 </section>
 
 <section style="max-width:800px;margin:2rem auto;padding:0 1rem">
   <h2>Accessibilité — modes disponibles</h2>
   <ul class="security-list">
-    <li>✅ Mode <strong>dyslexie</strong> (police OpenDyslexic, espacement augmenté)</li>
-    <li>✅ Mode <strong>contraste élevé</strong> (fond noir, texte blanc)</li>
-    <li>✅ Agrandissement texte jusqu'à 24px</li>
-    <li>✅ Navigation clavier complète</li>
+    <li>✅ Mode <strong>dyslexie</strong> (police OpenDyslexic, espacement augmenté, fond beige)</li>
+    <li>✅ Mode <strong>contraste élevé</strong> (fond noir, texte blanc, accents jaunes)</li>
+    <li>✅ Agrandissement texte progressif jusqu'à 24px</li>
+    <li>✅ Navigation clavier complète (Tab, Escape, Enter)</li>
     <li>✅ Compatible lecteur d'écran (NVDA, JAWS, VoiceOver)</li>
-    <li>✅ Interface FALC disponible sur demande (Forfait Autonomie+)</li>
+    <li>✅ Interface FALC disponible via l'assistant IA (Forfait Autonomie+)</li>
+    <li>✅ Respect <code>prefers-reduced-motion</code></li>
   </ul>
 </section>
 
 <section id="tarifs-mini" style="max-width:800px;margin:2rem auto;padding:1.5rem;background:var(--priority);border-radius:var(--radius)">
   <h2>Accès à cette démarche</h2>
-  <p>Cette démarche est disponible à partir du <strong>Forfait Découverte (gratuit)</strong> pour les 5 démarches prioritaires, ou incluse dans <strong>Forfait Autonomie à 8,90 €/mois</strong> (30 démarches).</p>
-  <a href="../tarifs.html" class="btn btn-fc" style="margin-top:1rem">Voir les forfaits →</a>
+  <p>Cette démarche est disponible à partir du <strong>Forfait Découverte (gratuit)</strong> pour les 5 démarches prioritaires, ou incluse dans le <strong>Forfait Autonomie à 8,90 €/mois</strong> (30 démarches complètes).</p>
+  <a href="../tarifs.html" class="btn btn-fc" style="margin-top:1rem">Voir les forfaits détaillés →</a>
 </section>
-</main>
 
+</main>
 <footer>
-  <p>PassCerfa — assistance démarches admin FR — <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
+  <p>PassCerfa — assistance démarches administratives FR · <a href="mailto:miningexpert31@gmail.com">miningexpert31@gmail.com</a></p>
   <p><a href="../mentions-legales.html">Mentions légales</a> · <a href="../confidentialite.html">Confidentialité</a> · <a href="../accessibilite.html">Déclaration accessibilité</a> · <a href="../tarifs.html">Tarifs</a></p>
   <p style="font-size:.8rem;opacity:.6">Site frère : <a href="https://jarvis-delmas.netlify.app">jarvis-delmas.netlify.app</a></p>
 </footer>
 <script src="../assets/a11y.js"></script>
+<script src="../assets/api-widgets.js"></script>
 </body>
 </html>
